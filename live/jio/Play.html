@@ -1,54 +1,26 @@
-<?php
-
-// Copyright 2021-2024 SnehTV, Inc.
-// Licensed under MIT (https://github.com/mitthu786/TS-JioTV/blob/main/LICENSE)
-// Created By : TechieSneh
-
-error_reporting(0);
-$data = base64_decode($_REQUEST['data']);
-$data = explode('=?=', $data);
-$cid = $data[0];
-$name = str_replace('_', ' ', $cid);
-$id = $data[1];
-
-?>
+<!--
+* Created By : Yashraj Mod 
+-->
 
 <html lang="en">
 
 <head>
-    <title id="pageTitle">Default Title | JioTv</title>
+    <title></title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="description" content="ENJOY FREE LIVE TV">
     <meta name="keywords" content="LIVETV, SPORTS, MOVIES, MUSIC">
-    <meta name="author" content="Vaathala">
+    <meta name="author" content="Spidyworld">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <link rel="stylesheet" href="https://cdn.plyr.io/3.6.2/plyr.css" />
     <script src="https://cdn.plyr.io/3.6.3/plyr.js"></script>
-    <script src="main/assets/js/jwplayer.js"></script>
-    <link rel="shortcut icon" type="image/x-icon" href="https://i.ibb.co/BcjC6R8/jiotv.png">
+    <script src="assets/js/jwplayer.js"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="https://i.ibb.co/37fVLxB/f4027915ec9335046755d489a14472f2.png">
     <script type='text/javascript' src='https://content.jwplatform.com/libraries/IDzF9Zmk.js'></script>
 
-<script>
-// Get the ID from the URL
-var urlParams = new URLSearchParams(window.location.search);
-var id = urlParams.get('id');
-
-// Update the title with the ID
-document.getElementById('pageTitle').innerText = id + " | Sony Liv";
-</script>
-
-<style type='text/css'>
-/* Animation */
-@keyframes fadeInDown{0%{opacity:0;transform:translateY(-20px)}100%{opacity:1;transform:translateY(0)}}@keyframes rubberBand{from{transform:scale3d(1,1,1)}30%{transform:scale3d(1.25,0.75,1)}40%{transform:scale3d(0.75,1.25,1)}50%{transform:scale3d(1.15,0.85,1)}65%{transform:scale3d(.95,1.05,1)}75%{transform:scale3d(1.05,.95,1)}to{transform:scale3d(1,1,1)}}#arlinablock{background:rgba(0,0,0,0.65);position:fixed;margin:auto;left:0;right:0;top:0;bottom:0;overflow:auto;z-index:999999;animation:fadeInDown 1s}#arlinablock .header{margin:0 0 15px}#arlinablock .inner{background:#E74C3C;color:#fff;box-shadow:0 5px 20px rgba(0,0,0,0.1);text-align:center;width:600px;padding:40px;border-radius:5px;margin:7% auto 2%;animation:rubberBand 1s}#arlinablock button{padding:10px 20px;border:0;background:rgba(0,0,0,0.15);color:#fff;margin:20px 5px;cursor:pointer;transition:all .3s}#arlinablock button:hover{background:rgba(0,0,0,0.35);color:#fff;outline:none}#arlinablock button.active,#arlinablock button:hover.active{background:#fff;color:#222;outline:none}#arlinablock .fixblock{background:#fff;text-align:left;color:#000;padding:20px;height:250px;overflow:auto;line-height:30px}#arlinablock .fixblock div{display:none}#arlinablock .fixblock div.active{display:block}#arlinablock ol{margin-left:20px}@media(max-width:768px){#arlinablock .inner{width:calc(100% - 20px);margin:10px auto;padding:15px}}.inner h2{color: whitesmoke;text-shadow: black;}
-
-/* Say Hi to Adblock */
-#arlinablock{background:rgba(0,0,0,0.65);position:fixed;margin:auto;left:0;right:0;top:0;bottom:0;overflow:auto;z-index:999999;animation:fadeInDown 1s}#arlinablock .header{margin:0 0 15px}#arlinablock .inner{background:#E74C3C;color:#fff;box-shadow:0 5px 20px rgba(0,0,0,0.1);text-align:center;width:600px;padding:40px;border-radius:5px;margin:7% auto 2%;animation:rubberBand 1s}#arlinablock button{padding:10px 20px;border:0;background:rgba(0,0,0,0.15);color:#fff;margin:20px 5px;cursor:pointer;transition:all .3s}#arlinablock button:hover{background:rgba(0,0,0,0.35);color:#fff;outline:none}#arlinablock button.active,#arlinablock button:hover.active{background:#fff;color:#222;outline:none}#arlinablock .fixblock{background:#fff;text-align:left;color:#000;padding:20px;height:250px;overflow:auto;line-height:30px}#arlinablock .fixblock div{display:none}#arlinablock .fixblock div.active{display:block}#arlinablock ol{margin-left:20px}@media(max-width:768px){#arlinablock .inner{width:calc(100% - 20px);margin:10px auto;padding:15px}}
-</style>
 </head>
-    <script type='text/javascript' src='//eltontry.com/09/f1/e9/09f1e956c711aea6a898d5abbb78d092.js'></script>
 
-<body>
+
     <style>
         .jw-svg-icon-pause {
             background-image: url("assets/img/jwplay/pause.svg");
@@ -85,6 +57,7 @@ document.getElementById('pageTitle').innerText = id + " | Sony Liv";
         [class~=jw-svg-icon-settings],
         [class~=jw-svg-icon-next] {
             background-size: contain;
+            
         }
 
         [class~=jw-svg-icon-quality-100],
@@ -513,67 +486,45 @@ document.getElementById('pageTitle').innerText = id + " | Sony Liv";
         #videoContainer {
             height: 100% !important;
         }
-
-.logo {
-  position: absolute;
-  top: 77px; /* Adjust the top position as needed */
-  left: 30px; /* Adjust the left position as needed */
-  width: 141px; /* Set the width of the logo */
-  height: 35px; /* Set the height of the logo */
-  background: url('https://i.ibb.co/hXw44BG/output-onlinegiftools.gif') no-repeat;
-  background-size: contain;
-  z-index: 1; /* Ensure the logo is on top of the iframe */
-}
-
     </style>
-   <video id="myElement"></video>
-  <div class="logo"></div>
-<script type="text/javascript">
-    jwplayer.key = 'Khpp2dHxlBJHC8MCmLnBuV2jK/DwDnJMniwF6EO9HC/riJ712ZmbHg==';
-</script>
- <script type="text/javascript">
-        // Function to get URL parameter by name
-        function getUrlParameter(name) {
-            name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
-            var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
-            var results = regex.exec(location.search);
-            return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
-        }
-
-        var id = getUrlParameter('id');
-        
-        // Load the m1.json file and get the video data by ID
-        var xhr = new XMLHttpRequest();
-        xhr.onreadystatechange = function() {
-            if (xhr.readyState === 4 && xhr.status === 200) {
-                var data = JSON.parse(xhr.responseText);
-                var videoData = data.find(video => video.id === id);
-
-                jwplayer("myElement").setup({
-                    title: videoData.name,
-                    description: "VaathalaTV",
-                    image: videoData.logo,
-                    aspectratio: '16:9',
-                    width: '100%',
-                    mute: false,
-                    autostart: true,
-                    file: videoData.link,
-                    type: "hls",
-                    captions: {color: '#ffb800', fontSize: 30, backgroundOpacity: 0},
-                    sharing: {
-                        sites: ['facebook', 'twitter']
-                    }
-                });
-            }
-        };
-        xhr.open('GET', 'jio.json', true);
-        xhr.send();
+    <video id="myElement"></video>
+    <script type="text/javascript">
+        jwplayer.key = 'Khpp2dHxlBJHC8MCmLnBuV2jK/DwDnJMniwF6EO9HC/riJ712ZmbHg==';
     </script>
-<script type='text/javascript'>
-//<![CDATA[
-// Say Hi to Adblock
-function downloadJSAtOnload(){var e=document.createElement("script");e.src="https://cdn.jsdelivr.net/gh/Arlina-Design/quasar@master/arlinablock.js",document.body.appendChild(e)}window.addEventListener?window.addEventListener("load",downloadJSAtOnload,!1):window.attachEvent?window.attachEvent("onload",downloadJSAtOnload):window.onload=downloadJSAtOnload;
-//]]>
+    <script type="text/JavaScript">
+        jwplayer("myElement").setup({
+            title: 'History HD',
+            description: "@yashrajmod1",
+            image: 'https://i.postimg.cc/qMV1MNhM/avatar-1001659321454.jpg',
+            aspectratio: '16:9',
+            width: '100%',
+            autostart: false,
+            file: "live.php?id=146&e=.m3u8",
+            type: "mp4",
+            abouttext: 'Author',
+            aboutlink: 'https://instagram.com/',
+            captions: {color: 'yellow',fontSize: 30,backgroundOpacity: 0},
+            sharing: {
+                sites: ['facebook','twitter']
+            }
+        })
+    </script>
+	<script type="text/javascript">
+	atOptions = {
+		'key' : '1e20daf721cc975a87d82db6d5760e65',
+		'format' : 'iframe',
+		'height' : 90,
+		'width' : 728,
+		'params' : {}
+	};
 </script>
+
 </body>
+<!-- Telegram button -->
+<a class="button" href="https://t.me/yashrajmod1" target="_blank">Join Telegram @yashrajmod 💕</a>
+
+</body>
+
+
 </html>
+
